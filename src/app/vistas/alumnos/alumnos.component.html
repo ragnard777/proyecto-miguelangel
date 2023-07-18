@@ -1,0 +1,21 @@
+<br />
+<p>Fecha actual: {{ hoy | date : "fullDate" }}</p>
+<br />
+<p>
+  Lorem ipsum,
+  <span appResaltado="violet">dolor sit amet consectetur adipisicing elit</span
+  >. Lorem ipsum dolor sit amet.
+</p>
+<br />
+<app-lista-de-alumnos
+  (eliminarAlumno)="onEliminarAlumno($event)"
+  (editarAlumno)="onEditarAlumno($event)"
+  [dataSource]="alumnos"
+></app-lista-de-alumnos>
+<br />
+<div class="mb-5">
+  <button (click)="crearAlumno()" mat-flat-button color="primary" type="button">
+    <mat-icon>add</mat-icon>
+    Crear usuario
+  </button>
+</div>
